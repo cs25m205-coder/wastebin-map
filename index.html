@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e8805dd786ba58931be0e70ff0670c32 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e8805dd786ba58931be0e70ff0670c32" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e8805dd786ba58931be0e70ff0670c32 = L.map(
+                "map_e8805dd786ba58931be0e70ff0670c32",
+                {
+                    center: [13.712681428770523, 79.5906957548053],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_e8805dd786ba58931be0e70ff0670c32);
+
+            
+
+        
+    
+            var tile_layer_e659c66a132a80cc9496962de867637c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e659c66a132a80cc9496962de867637c.addTo(map_e8805dd786ba58931be0e70ff0670c32);
+        
+    
+        function geo_json_2e694a0b91d3146e4afcfaf7fa0701b6_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "#7A1F4B",
+  "weight": 1,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#C14675",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_2e694a0b91d3146e4afcfaf7fa0701b6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_2e694a0b91d3146e4afcfaf7fa0701b6 = L.geoJson(null, {
+                onEachFeature: geo_json_2e694a0b91d3146e4afcfaf7fa0701b6_onEachFeature,
+            
+                pointToLayer: geo_json_2e694a0b91d3146e4afcfaf7fa0701b6_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_2e694a0b91d3146e4afcfaf7fa0701b6_add (data) {
+            geo_json_2e694a0b91d3146e4afcfaf7fa0701b6
+                .addData(data);
+        }
+            geo_json_2e694a0b91d3146e4afcfaf7fa0701b6_add({"bbox": [79.58607026999998, 13.70603961, 79.59540949, 13.718021229999998], "features": [{"bbox": [79.5913409, 13.715256399999996, 79.5913409, 13.715256399999996], "geometry": {"coordinates": [79.5913409, 13.715256399999996, 30.100000381469727], "type": "Point"}, "id": "0", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905145457332.jpg", "note": "Ab1 canteen\n", "note_uuid": "{14ae3a70-7aad-4f53-9fc8-5c8f138ba692}", "photo": "\u003cimg src=\"assets/JPEG_20260905145457332.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 14:54:16.812000+00:00", "title": "1", "uuid": "{14ae3a70-7aad-4f53-9fc8-5c8f138ba692}"}, "type": "Feature"}, {"bbox": [79.59102930999997, 13.714995539999997, 79.59102930999997, 13.714995539999997], "geometry": {"coordinates": [79.59102930999997, 13.714995539999997, 20.3692626953125], "type": "Point"}, "id": "1", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905145711389.jpg", "note": "In front of LHC", "note_uuid": "{9d5b5878-ba61-403e-a373-de976c42fc03}", "photo": "\u003cimg src=\"assets/JPEG_20260905145711389.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 14:56:57.013000+00:00", "title": "2", "uuid": "{9d5b5878-ba61-403e-a373-de976c42fc03}"}, "type": "Feature"}, {"bbox": [79.59178665000002, 13.715789669999998, 79.59178665000002, 13.715789669999998], "geometry": {"coordinates": [79.59178665000002, 13.715789669999998, 16.30535888671875], "type": "Point"}, "id": "2", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905150107863.jpg", "note": "AB1 front gate", "note_uuid": "{5f434b43-b410-4037-851a-986f1e26bbe7}", "photo": "\u003cimg src=\"assets/JPEG_20260905150107863.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:00:56.835000+00:00", "title": "3", "uuid": "{5f434b43-b410-4037-851a-986f1e26bbe7}"}, "type": "Feature"}, {"bbox": [79.59173205999998, 13.71700174, 79.59173205999998, 13.71700174], "geometry": {"coordinates": [79.59173205999998, 13.71700174, 20.3765869140625], "type": "Point"}, "id": "3", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905150503246.jpg", "note": "TIH front stand", "note_uuid": "{10a14132-690f-472f-9312-d5d64a9e15a0}", "photo": "\u003cimg src=\"assets/JPEG_20260905150503246.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:04:36.652000+00:00", "title": "4", "uuid": "{10a14132-690f-472f-9312-d5d64a9e15a0}"}, "type": "Feature"}, {"bbox": [79.59432336999997, 13.71459137, 79.59432336999997, 13.71459137], "geometry": {"coordinates": [79.59432336999997, 13.71459137, 9.065704345703125], "type": "Point"}, "id": "4", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905151557304.jpg", "note": "Admin road front", "note_uuid": "{43502378-46da-4e4e-9090-f2fc6d9d8105}", "photo": "\u003cimg src=\"assets/JPEG_20260905151557304.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:15:46.116000+00:00", "title": "5", "uuid": "{43502378-46da-4e4e-9090-f2fc6d9d8105}"}, "type": "Feature"}, {"bbox": [79.59365660999997, 13.71432454, 79.59365660999997, 13.71432454], "geometry": {"coordinates": [79.59365660999997, 13.71432454, 12.05804443359375], "type": "Point"}, "id": "5", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905151817487.jpg", "note": "Inside Admin Block", "note_uuid": "{fe442247-7b81-4234-b91e-464c2678c8da}", "photo": "\u003cimg src=\"assets/JPEG_20260905151817487.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:18:08.640000+00:00", "title": "6", "uuid": "{fe442247-7b81-4234-b91e-464c2678c8da}"}, "type": "Feature"}, {"bbox": [79.59351476, 13.713473579999999, 79.59351476, 13.713473579999999], "geometry": {"coordinates": [79.59351476, 13.713473579999999, 13.5203857421875], "type": "Point"}, "id": "6", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905152512416.jpg", "note": "Admin Parking", "note_uuid": "{27fb71f3-9d94-48db-8cc8-c65a55dee6b4}", "photo": "\u003cimg src=\"assets/JPEG_20260905152512416.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:24:57.285000+00:00", "title": "7", "uuid": "{27fb71f3-9d94-48db-8cc8-c65a55dee6b4}"}, "type": "Feature"}, {"bbox": [79.59494542999997, 13.717238939999998, 79.59494542999997, 13.717238939999998], "geometry": {"coordinates": [79.59494542999997, 13.717238939999998, 8.65447998046875], "type": "Point"}, "id": "7", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905153143732.jpg", "note": "Pond water filter", "note_uuid": "{b9ae6eca-f3bb-4ebc-9618-7226306cc512}", "photo": "\u003cimg src=\"assets/JPEG_20260905153143732.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:31:26.259000+00:00", "title": "8", "uuid": "{b9ae6eca-f3bb-4ebc-9618-7226306cc512}"}, "type": "Feature"}, {"bbox": [79.58852405, 13.71653241, 79.58852405, 13.71653241], "geometry": {"coordinates": [79.58852405, 13.71653241, 26.9111328125], "type": "Point"}, "id": "8", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905154402491.jpg", "note": "Mess to LHC (near North Mess) ", "note_uuid": "{49958af8-9af6-4b81-9be1-95212c46b3a3}", "photo": "\u003cimg src=\"assets/JPEG_20260905154402491.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:43:50.440000+00:00", "title": "9", "uuid": "{49958af8-9af6-4b81-9be1-95212c46b3a3}"}, "type": "Feature"}, {"bbox": [79.58752834999997, 13.7175113, 79.58752834999997, 13.7175113], "geometry": {"coordinates": [79.58752834999997, 13.7175113, 30.41864013671875], "type": "Point"}, "id": "9", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905154957559.jpg", "note": "North canteen", "note_uuid": "{fcf64c0a-22fc-4a67-9c29-16ea8def55ba}", "photo": "\u003cimg src=\"assets/JPEG_20260905154957559.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:49:38.754000+00:00", "title": "10", "uuid": "{fcf64c0a-22fc-4a67-9c29-16ea8def55ba}"}, "type": "Feature"}, {"bbox": [79.58748471, 13.717745039999997, 79.58748471, 13.717745039999997], "geometry": {"coordinates": [79.58748471, 13.717745039999997, 30.21844482421875], "type": "Point"}, "id": "10", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905155339124.jpg", "note": "Malhar Hostel", "note_uuid": "{331d656e-005a-4fd2-86be-bb3a716072ab}", "photo": "\u003cimg src=\"assets/JPEG_20260905155339124.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:53:26.205000+00:00", "title": "11", "uuid": "{331d656e-005a-4fd2-86be-bb3a716072ab}"}, "type": "Feature"}, {"bbox": [79.58718459, 13.718021229999998, 79.58718459, 13.718021229999998], "geometry": {"coordinates": [79.58718459, 13.718021229999998, 32.75860595703125], "type": "Point"}, "id": "11", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905155624335.jpg", "note": "In b/w malhar \u0026 DES", "note_uuid": "{cc9f4eb5-c7e6-4a65-b6b0-e9f9b2da2115}", "photo": "\u003cimg src=\"assets/JPEG_20260905155624335.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:56:00.718000+00:00", "title": "12", "uuid": "{cc9f4eb5-c7e6-4a65-b6b0-e9f9b2da2115}"}, "type": "Feature"}, {"bbox": [79.5867572, 13.717734550000001, 79.5867572, 13.717734550000001], "geometry": {"coordinates": [79.5867572, 13.717734550000001, 30.797119140625], "type": "Point"}, "id": "12", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905155741580.jpg", "note": "DES Hostel", "note_uuid": "{d27f4ee1-541d-4020-b57e-b019f5980515}", "photo": "\u003cimg src=\"assets/JPEG_20260905155741580.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:57:30.979000+00:00", "title": "13", "uuid": "{d27f4ee1-541d-4020-b57e-b019f5980515}"}, "type": "Feature"}, {"bbox": [79.5869444, 13.717606709999998, 79.5869444, 13.717606709999998], "geometry": {"coordinates": [79.5869444, 13.717606709999998, 38.9844970703125], "type": "Point"}, "id": "13", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905155912250.jpg", "note": "Des Circle", "note_uuid": "{72bab2b9-3bc5-4c61-82e7-9fdbc22afe59}", "photo": "\u003cimg src=\"assets/JPEG_20260905155912250.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 15:59:00.895000+00:00", "title": "14", "uuid": "{72bab2b9-3bc5-4c61-82e7-9fdbc22afe59}"}, "type": "Feature"}, {"bbox": [79.58650812, 13.717340169999996, 79.58650812, 13.717340169999996], "geometry": {"coordinates": [79.58650812, 13.717340169999996, 34.82696533203125], "type": "Point"}, "id": "14", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905160115522.jpg", "note": "B/w mess \u0026 DES", "note_uuid": "{9806bc77-e6c6-440e-af99-f248d4db9ce0}", "photo": "\u003cimg src=\"assets/JPEG_20260905160115522.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:01:05.545000+00:00", "title": "15", "uuid": "{9806bc77-e6c6-440e-af99-f248d4db9ce0}"}, "type": "Feature"}, {"bbox": [79.58642504, 13.71663861, 79.58642504, 13.71663861], "geometry": {"coordinates": [79.58642504, 13.71663861, 34.76007080078125], "type": "Point"}, "id": "15", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905160305708.jpg", "note": "Backside of North mess", "note_uuid": "{60ab6966-4a61-4faf-8269-4c6b826de655}", "photo": "\u003cimg src=\"assets/JPEG_20260905160305708.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:02:53.653000+00:00", "title": "16", "uuid": "{60ab6966-4a61-4faf-8269-4c6b826de655}"}, "type": "Feature"}, {"bbox": [79.58719387, 13.717167329999995, 79.58719387, 13.717167329999995], "geometry": {"coordinates": [79.58719387, 13.717167329999995, 33.073974609375], "type": "Point"}, "id": "16", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905160529848.jpg", "note": "North OAT", "note_uuid": "{8eb0dc9e-097b-4961-9e5a-29f53af5e027}", "photo": "\u003cimg src=\"assets/JPEG_20260905160529848.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:05:21.534000+00:00", "title": "17", "uuid": "{8eb0dc9e-097b-4961-9e5a-29f53af5e027}"}, "type": "Feature"}, {"bbox": [79.58708534, 13.717028590000002, 79.58708534, 13.717028590000002], "geometry": {"coordinates": [79.58708534, 13.717028590000002, 35.9564208984375], "type": "Point"}, "id": "17", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905160703050.jpg", "note": "North Mess", "note_uuid": "{a37c20cd-58a8-4e9c-8ec5-31aab070c79b}", "photo": "\u003cimg src=\"assets/JPEG_20260905160703050.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:06:51.627000+00:00", "title": "18", "uuid": "{a37c20cd-58a8-4e9c-8ec5-31aab070c79b}"}, "type": "Feature"}, {"bbox": [79.58614656, 13.716553849999997, 79.58614656, 13.716553849999997], "geometry": {"coordinates": [79.58614656, 13.716553849999997, 33.74444580078125], "type": "Point"}, "id": "18", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905161637220.jpg", "note": "On the way to North sports complex", "note_uuid": "{d08d0169-7bb0-4828-8a3e-7b4a52fb1602}", "photo": "\u003cimg src=\"assets/JPEG_20260905161637220.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:16:27.842000+00:00", "title": "19", "uuid": "{d08d0169-7bb0-4828-8a3e-7b4a52fb1602}"}, "type": "Feature"}, {"bbox": [79.58621234999997, 13.714847529999997, 79.58621234999997, 13.714847529999997], "geometry": {"coordinates": [79.58621234999997, 13.714847529999997, 42.50567626953125], "type": "Point"}, "id": "19", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905162032121.jpg", "note": "North Sports Complex entrance", "note_uuid": "{ebac6387-3f30-43d8-8b28-3978ca70ac08}", "photo": "\u003cimg src=\"assets/JPEG_20260905162032121.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:20:15.612000+00:00", "title": "20", "uuid": "{ebac6387-3f30-43d8-8b28-3978ca70ac08}"}, "type": "Feature"}, {"bbox": [79.58620093999998, 13.714878069999997, 79.58620093999998, 13.714878069999997], "geometry": {"coordinates": [79.58620093999998, 13.714878069999997, 42.59698486328125], "type": "Point"}, "id": "20", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905162148920.jpg", "note": "North Sports Complex inside", "note_uuid": "{e14555e7-09a1-4dc1-b18d-11cde14796d5}", "photo": "\u003cimg src=\"assets/JPEG_20260905162148920.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:21:38.091000+00:00", "title": "21", "uuid": "{e14555e7-09a1-4dc1-b18d-11cde14796d5}"}, "type": "Feature"}, {"bbox": [79.58653570999999, 13.71467432, 79.58653570999999, 13.71467432], "geometry": {"coordinates": [79.58653570999999, 13.71467432, 38.781005859375], "type": "Point"}, "id": "21", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905162549390.jpg", "note": "Tennis sport area", "note_uuid": "{652e63ca-f67e-4bf3-8f78-6ad23771a7f9}", "photo": "\u003cimg src=\"assets/JPEG_20260905162549390.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:25:40.346000+00:00", "title": "22", "uuid": "{652e63ca-f67e-4bf3-8f78-6ad23771a7f9}"}, "type": "Feature"}, {"bbox": [79.58615258, 13.71459379, 79.58615258, 13.71459379], "geometry": {"coordinates": [79.58615258, 13.71459379, 40.031005859375], "type": "Point"}, "id": "22", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905162724187.jpg", "note": "\ud83c\udfbeTennis", "note_uuid": "{007e5d25-39a4-400b-aee9-d36983c94f9a}", "photo": "\u003cimg src=\"assets/JPEG_20260905162724187.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:27:13.180000+00:00", "title": "23", "uuid": "{007e5d25-39a4-400b-aee9-d36983c94f9a}"}, "type": "Feature"}, {"bbox": [79.58607026999998, 13.714441239999998, 79.58607026999998, 13.714441239999998], "geometry": {"coordinates": [79.58607026999998, 13.714441239999998, 48.01220703125], "type": "Point"}, "id": "23", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905162839464.jpg", "note": "Behind \ud83c\udfbetennis", "note_uuid": "{87682f9e-284c-4125-b380-6f05fb6ab9fc}", "photo": "\u003cimg src=\"assets/JPEG_20260905162839464.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:28:14.694000+00:00", "title": "24", "uuid": "{87682f9e-284c-4125-b380-6f05fb6ab9fc}"}, "type": "Feature"}, {"bbox": [79.58613373999997, 13.714195, 79.58613373999997, 13.714195], "geometry": {"coordinates": [79.58613373999997, 13.714195, 49.5892333984375], "type": "Point"}, "id": "24", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905163117522.jpg", "note": "Behind north sports", "note_uuid": "{500a668e-1003-4bdd-8337-7571017a87cb}", "photo": "\u003cimg src=\"assets/JPEG_20260905163117522.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:31:06.546000+00:00", "title": "25", "uuid": "{500a668e-1003-4bdd-8337-7571017a87cb}"}, "type": "Feature"}, {"bbox": [79.58613839, 13.714063570000002, 79.58613839, 13.714063570000002], "geometry": {"coordinates": [79.58613839, 13.714063570000002, 50.3480224609375], "type": "Point"}, "id": "25", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905163202269.jpg", "note": "Behind North sports tennis", "note_uuid": "{2c1ee41f-50fe-40a5-a612-bdca2d0c9c71}", "photo": "\u003cimg src=\"assets/JPEG_20260905163202269.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:31:52.027000+00:00", "title": "26", "uuid": "{2c1ee41f-50fe-40a5-a612-bdca2d0c9c71}"}, "type": "Feature"}, {"bbox": [79.58688029, 13.714018069999998, 79.58688029, 13.714018069999998], "geometry": {"coordinates": [79.58688029, 13.714018069999998, 35.4791259765625], "type": "Point"}, "id": "26", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905163525375.jpg", "note": "Tennis side", "note_uuid": "{2ff003db-836e-4f8f-9123-559f0dcff6ca}", "photo": "\u003cimg src=\"assets/JPEG_20260905163525375.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:35:15.872000+00:00", "title": "27", "uuid": "{2ff003db-836e-4f8f-9123-559f0dcff6ca}"}, "type": "Feature"}, {"bbox": [79.58862153999999, 13.71560588, 79.58862153999999, 13.71560588], "geometry": {"coordinates": [79.58862153999999, 13.71560588, 23.0966796875], "type": "Point"}, "id": "27", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905164946459.jpg", "note": "LHC road\n", "note_uuid": "{24a5439e-a22e-4638-9532-0de232bbd191}", "photo": "\u003cimg src=\"assets/JPEG_20260905164946459.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:49:07.763000+00:00", "title": "28", "uuid": "{24a5439e-a22e-4638-9532-0de232bbd191}"}, "type": "Feature"}, {"bbox": [79.58927168, 13.7150072, 79.58927168, 13.7150072], "geometry": {"coordinates": [79.58927168, 13.7150072, 16.843505859375], "type": "Point"}, "id": "28", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905165129121.jpg", "note": "LHC road", "note_uuid": "{ef89c8d5-2104-4865-be43-52eae2578af9}", "photo": "\u003cimg src=\"assets/JPEG_20260905165129121.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:51:01.867000+00:00", "title": "29", "uuid": "{ef89c8d5-2104-4865-be43-52eae2578af9}"}, "type": "Feature"}, {"bbox": [79.58961558, 13.71456322, 79.58961558, 13.71456322], "geometry": {"coordinates": [79.58961558, 13.71456322, 20.55584716796875], "type": "Point"}, "id": "29", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260905165352803.jpg", "note": "LHC road", "note_uuid": "{542bf636-6526-4b2e-9834-0c7a47d52918}", "photo": "\u003cimg src=\"assets/JPEG_20260905165352803.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-05 16:53:42.883000+00:00", "title": "30", "uuid": "{542bf636-6526-4b2e-9834-0c7a47d52918}"}, "type": "Feature"}, {"bbox": [79.59438243, 13.707692539999998, 79.59438243, 13.707692539999998], "geometry": {"coordinates": [79.59438243, 13.707692539999998, 19.623779296875], "type": "Point"}, "id": "30", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906111010537.jpg", "note": "South-infront of sahana", "note_uuid": "{ba29cd74-c77f-4fe3-8712-899140bed11c}", "photo": "\u003cimg src=\"assets/JPEG_20260906111010537.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:09:46.398000+00:00", "title": "Dustbin 31", "uuid": "{ba29cd74-c77f-4fe3-8712-899140bed11c}"}, "type": "Feature"}, {"bbox": [79.59451685000002, 13.70708715, 79.59451685000002, 13.70708715], "geometry": {"coordinates": [79.59451685000002, 13.70708715, 22.07501220703125], "type": "Point"}, "id": "31", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906111252848.jpg", "note": "South-OAT", "note_uuid": "{7102f6c2-d0c0-4d34-8a21-ce75c8c5d2d3}", "photo": "\u003cimg src=\"assets/JPEG_20260906111252848.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:12:41.082000+00:00", "title": "32", "uuid": "{7102f6c2-d0c0-4d34-8a21-ce75c8c5d2d3}"}, "type": "Feature"}, {"bbox": [79.59448449999998, 13.7067386, 79.59448449999998, 13.7067386], "geometry": {"coordinates": [79.59448449999998, 13.7067386, 35.0], "type": "Point"}, "id": "32", "properties": {"collected_by": "Keerthi Annamneedi", "media": null, "note": null, "note_uuid": null, "photo": "", "timestamp": "2026-09-06 11:15:23.559000+00:00", "title": null, "uuid": "{2df685da-3114-404d-a626-f0f6028e95be}"}, "type": "Feature"}, {"bbox": [79.59447797, 13.706690119999996, 79.59447797, 13.706690119999996], "geometry": {"coordinates": [79.59447797, 13.706690119999996, 25.12774658203125], "type": "Point"}, "id": "33", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906111555827.jpg", "note": "South-infront of lab1", "note_uuid": "{5f72844a-b35e-48b3-9083-58845b5614eb}", "photo": "\u003cimg src=\"assets/JPEG_20260906111555827.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:15:37.396000+00:00", "title": "33", "uuid": "{5f72844a-b35e-48b3-9083-58845b5614eb}"}, "type": "Feature"}, {"bbox": [79.59447009, 13.70603961, 79.59447009, 13.70603961], "geometry": {"coordinates": [79.59447009, 13.70603961, 18.076904296875], "type": "Point"}, "id": "34", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906111826377.jpg", "note": "South gate", "note_uuid": "{0f0be789-d7f0-4361-8a6f-51d6e86f805c}", "photo": "\u003cimg src=\"assets/JPEG_20260906111826377.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:18:16.760000+00:00", "title": "34", "uuid": "{0f0be789-d7f0-4361-8a6f-51d6e86f805c}"}, "type": "Feature"}, {"bbox": [79.59278165000002, 13.707187289999998, 79.59278165000002, 13.707187289999998], "geometry": {"coordinates": [79.59278165000002, 13.707187289999998, 29.42706298828125], "type": "Point"}, "id": "35", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906112521515.jpg", "note": "South-kv road", "note_uuid": "{04d91769-af68-4044-b093-9f2677a091c6}", "photo": "\u003cimg src=\"assets/JPEG_20260906112521515.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:24:57.632000+00:00", "title": "35", "uuid": "{04d91769-af68-4044-b093-9f2677a091c6}"}, "type": "Feature"}, {"bbox": [79.59289213000001, 13.707337949999998, 79.59289213000001, 13.707337949999998], "geometry": {"coordinates": [79.59289213000001, 13.707337949999998, 29.693359375], "type": "Point"}, "id": "36", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906113046432.jpg", "note": "South-supermarket area", "note_uuid": "{80e5e288-884c-4605-b7b5-ad6590eaa9f7}", "photo": "\u003cimg src=\"assets/JPEG_20260906113046432.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:30:22.841000+00:00", "title": "36", "uuid": "{80e5e288-884c-4605-b7b5-ad6590eaa9f7}"}, "type": "Feature"}, {"bbox": [79.59298108468109, 13.707341544837822, 79.59298108468109, 13.707341544837822], "geometry": {"coordinates": [79.59298108468109, 13.707341544837822, 0.0], "type": "Point"}, "id": "37", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906113454701.jpg", "note": "storeSouth-grocery ", "note_uuid": "{1a8ca093-0fac-4573-8f01-abaeaca9d336}", "photo": "\u003cimg src=\"assets/JPEG_20260906113454701.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:34:42.792000+00:00", "title": "37", "uuid": "{1a8ca093-0fac-4573-8f01-abaeaca9d336}"}, "type": "Feature"}, {"bbox": [79.59291312, 13.70741531, 79.59291312, 13.70741531], "geometry": {"coordinates": [79.59291312, 13.70741531, 31.03302001953125], "type": "Point"}, "id": "38", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906113733271.jpg", "note": "South-Residential area road", "note_uuid": "{26c99568-1e98-4071-8c93-c2e14e72ddd4}", "photo": "\u003cimg src=\"assets/JPEG_20260906113733271.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:37:19.711000+00:00", "title": "38", "uuid": "{26c99568-1e98-4071-8c93-c2e14e72ddd4}"}, "type": "Feature"}, {"bbox": [79.59296356, 13.707434010000002, 79.59296356, 13.707434010000002], "geometry": {"coordinates": [79.59296356, 13.707434010000002, 30.93182373046875], "type": "Point"}, "id": "39", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906113912746.jpg", "note": "South-vegetable store", "note_uuid": "{71f9cc37-1cbe-46e3-9072-cf0b35f4b992}", "photo": "\u003cimg src=\"assets/JPEG_20260906113912746.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:39:06.214000+00:00", "title": "39", "uuid": "{71f9cc37-1cbe-46e3-9072-cf0b35f4b992}"}, "type": "Feature"}, {"bbox": [79.59267349, 13.708343279999996, 79.59267349, 13.708343279999996], "geometry": {"coordinates": [79.59267349, 13.708343279999996, 29.60986328125], "type": "Point"}, "id": "40", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906114213764.jpg", "note": "Faculty quarters opposite road", "note_uuid": "{77531e3b-a1f5-4207-bb0a-ecaed000a8a6}", "photo": "\u003cimg src=\"assets/JPEG_20260906114213764.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:41:49.593000+00:00", "title": "40", "uuid": "{77531e3b-a1f5-4207-bb0a-ecaed000a8a6}"}, "type": "Feature"}, {"bbox": [79.59237171, 13.709782899999999, 79.59237171, 13.709782899999999], "geometry": {"coordinates": [79.59237171, 13.709782899999999, 27.17095947265625], "type": "Point"}, "id": "41", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906114553762.jpg", "note": "Sports Complex backside", "note_uuid": "{99e8f860-efed-4521-95ed-f654bd2df040}", "photo": "\u003cimg src=\"assets/JPEG_20260906114553762.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:45:34.026000+00:00", "title": "41", "uuid": "{99e8f860-efed-4521-95ed-f654bd2df040}"}, "type": "Feature"}, {"bbox": [79.59235325, 13.711075460000002, 79.59235325, 13.711075460000002], "geometry": {"coordinates": [79.59235325, 13.711075460000002, 22.11383056640625], "type": "Point"}, "id": "42", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906114923782.jpg", "note": "Residential area stairs-road", "note_uuid": "{a8c4bd26-2041-485d-a58e-d24b254deb60}", "photo": "\u003cimg src=\"assets/JPEG_20260906114923782.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:48:54.797000+00:00", "title": "42", "uuid": "{a8c4bd26-2041-485d-a58e-d24b254deb60}"}, "type": "Feature"}, {"bbox": [79.59164298999998, 13.711974259999998, 79.59164298999998, 13.711974259999998], "geometry": {"coordinates": [79.59164298999998, 13.711974259999998, 20.28857421875], "type": "Point"}, "id": "43", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906115416066.jpg", "note": "Director residence road", "note_uuid": "{c735387f-60cf-468d-a512-67fc78c70a8a}", "photo": "\u003cimg src=\"assets/JPEG_20260906115416066.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:54:07.308000+00:00", "title": "43", "uuid": "{c735387f-60cf-468d-a512-67fc78c70a8a}"}, "type": "Feature"}, {"bbox": [79.59174025999997, 13.71281826, 79.59174025999997, 13.71281826], "geometry": {"coordinates": [79.59174025999997, 13.71281826, 17.06689453125], "type": "Point"}, "id": "44", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906115719254.jpg", "note": "Academic zone-road", "note_uuid": "{d3885c97-151e-4d96-87a8-409fbb2b68e9}", "photo": "\u003cimg src=\"assets/JPEG_20260906115719254.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 11:57:03.551000+00:00", "title": "44", "uuid": "{d3885c97-151e-4d96-87a8-409fbb2b68e9}"}, "type": "Feature"}, {"bbox": [79.59238379000001, 13.71214719, 79.59238379000001, 13.71214719], "geometry": {"coordinates": [79.59238379000001, 13.71214719, 19.725341796875], "type": "Point"}, "id": "45", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906120140814.jpg", "note": "Circle junction-security desk", "note_uuid": "{1a305faf-62b7-4c98-bf1b-3e53372b703b}", "photo": "\u003cimg src=\"assets/JPEG_20260906120140814.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 12:01:20.280000+00:00", "title": "45", "uuid": "{1a305faf-62b7-4c98-bf1b-3e53372b703b}"}, "type": "Feature"}, {"bbox": [79.59309171, 13.709701559999997, 79.59309171, 13.709701559999997], "geometry": {"coordinates": [79.59309171, 13.709701559999997, 23.23211669921875], "type": "Point"}, "id": "46", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906120728065.jpg", "note": "Indoor stadium", "note_uuid": "{4d6c3580-39a1-4180-8608-35a32f433253}", "photo": "\u003cimg src=\"assets/JPEG_20260906120728065.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 12:07:18.239000+00:00", "title": "46", "uuid": "{4d6c3580-39a1-4180-8608-35a32f433253}"}, "type": "Feature"}, {"bbox": [79.59319866, 13.70998698, 79.59319866, 13.70998698], "geometry": {"coordinates": [79.59319866, 13.70998698, 24.6187744140625], "type": "Point"}, "id": "47", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906120902618.jpg", "note": "Sports Complex", "note_uuid": "{44589ed7-8408-4ca7-a63a-0f4b3ad3547c}", "photo": "\u003cimg src=\"assets/JPEG_20260906120902618.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 12:08:51.802000+00:00", "title": "47", "uuid": "{44589ed7-8408-4ca7-a63a-0f4b3ad3547c}"}, "type": "Feature"}, {"bbox": [79.59328009, 13.709408239999998, 79.59328009, 13.709408239999998], "geometry": {"coordinates": [79.59328009, 13.709408239999998, 22.25103759765625], "type": "Point"}, "id": "48", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906121118617.jpg", "note": "Basketball court- road", "note_uuid": "{e85ce4c7-5a59-43cc-85b5-c223260fb9ed}", "photo": "\u003cimg src=\"assets/JPEG_20260906121118617.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 12:10:52.347000+00:00", "title": "48", "uuid": "{e85ce4c7-5a59-43cc-85b5-c223260fb9ed}"}, "type": "Feature"}, {"bbox": [79.59387530999997, 13.708900409999993, 79.59387530999997, 13.708900409999993], "geometry": {"coordinates": [79.59387530999997, 13.708900409999993, 21.52197265625], "type": "Point"}, "id": "49", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906121338683.jpg", "note": "South hostel zone turning", "note_uuid": "{321e27aa-0bad-4244-a8ea-b649d392335d}", "photo": "\u003cimg src=\"assets/JPEG_20260906121338683.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 12:13:17.561000+00:00", "title": "49", "uuid": "{321e27aa-0bad-4244-a8ea-b649d392335d}"}, "type": "Feature"}, {"bbox": [79.59483911000001, 13.7081698, 79.59483911000001, 13.7081698], "geometry": {"coordinates": [79.59483911000001, 13.7081698, 14.70166015625], "type": "Point"}, "id": "50", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906121753024.jpg", "note": "South canteen", "note_uuid": "{04364c4d-fbf4-4732-96dd-64e54e63bc7e}", "photo": "\u003cimg src=\"assets/JPEG_20260906121753024.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 12:17:37.630000+00:00", "title": "50", "uuid": "{04364c4d-fbf4-4732-96dd-64e54e63bc7e}"}, "type": "Feature"}, {"bbox": [79.59540949, 13.70808688, 79.59540949, 13.70808688], "geometry": {"coordinates": [79.59540949, 13.70808688, 16.0743408203125], "type": "Point"}, "id": "51", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906122054383.jpg", "note": "Seismological observatory", "note_uuid": "{a522b397-3195-4e35-a1d0-b4a63bc428d4}", "photo": "\u003cimg src=\"assets/JPEG_20260906122054383.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 12:19:53.393000+00:00", "title": "51", "uuid": "{a522b397-3195-4e35-a1d0-b4a63bc428d4}"}, "type": "Feature"}, {"bbox": [79.59520736999997, 13.707316919999998, 79.59520736999997, 13.707316919999998], "geometry": {"coordinates": [79.59520736999997, 13.707316919999998, 17.32672119140625], "type": "Point"}, "id": "52", "properties": {"collected_by": "Keerthi Annamneedi", "media": "DCIM/JPEG_20260906122327701.jpg", "note": "Mess maintenance site", "note_uuid": "{67fafab9-2a2a-42da-a384-1660c900e570}", "photo": "\u003cimg src=\"assets/JPEG_20260906122327701.jpg\" width=\"200\"\u003e", "timestamp": "2026-09-06 12:23:15.856000+00:00", "title": "52", "uuid": "{67fafab9-2a2a-42da-a384-1660c900e570}"}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_2e694a0b91d3146e4afcfaf7fa0701b6.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+    geo_json_2e694a0b91d3146e4afcfaf7fa0701b6.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["title", "note", "timestamp", "photo", "collected_by"];
+    let aliases = ["Waste-bin ID:", "Field note:", "Observed:", "Photo:", "Collected by:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_2e694a0b91d3146e4afcfaf7fa0701b6.addTo(map_e8805dd786ba58931be0e70ff0670c32);
+        
+    
+            var layer_control_a6088f675b408a9290d69b8f0c8bbdde_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_e659c66a132a80cc9496962de867637c,
+                },
+                overlays :  {
+                    "Waste bins" : geo_json_2e694a0b91d3146e4afcfaf7fa0701b6,
+                },
+            };
+            let layer_control_a6088f675b408a9290d69b8f0c8bbdde = L.control.layers(
+                layer_control_a6088f675b408a9290d69b8f0c8bbdde_layers.base_layers,
+                layer_control_a6088f675b408a9290d69b8f0c8bbdde_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_e8805dd786ba58931be0e70ff0670c32);
+
+        
+    
+            tile_layer_e659c66a132a80cc9496962de867637c.addTo(map_e8805dd786ba58931be0e70ff0670c32);
+        
+    
+            geo_json_2e694a0b91d3146e4afcfaf7fa0701b6.addTo(map_e8805dd786ba58931be0e70ff0670c32);
+        
+</script>
+</html>
